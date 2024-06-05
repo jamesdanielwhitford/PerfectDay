@@ -10,6 +10,7 @@ struct NoteDetailView: View {
     @State private var showingCamera = false
     @State private var selectedImage: UIImage?
     @State private var isExpanded: [Bool] = []
+    @State private var isFirstResponder = true
 
     var body: some View {
         VStack {
@@ -22,12 +23,12 @@ struct NoteDetailView: View {
                                 isExpanded: $isExpanded[index],
                                 title: "",
                                 content: {
-                                    TextEditor(text: Binding(
+                                    FocusedTextEditor(text: Binding(
                                         get: { text },
                                         set: { newText in
                                             noteContents[index].text = newText
                                         }
-                                    ))
+                                    ), isFirstResponder: isFirstResponder)
                                     .frame(minHeight: 100)
                                     .padding()
                                 },
@@ -77,6 +78,9 @@ struct NoteDetailView: View {
                 addText()
             }
             isExpanded = Array(repeating: false, count: noteContents.count)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                isFirstResponder = true // Ensure keyboard appears when the view appears
+            }
         }
         .sheet(isPresented: $showingImagePicker) {
             ImagePicker(image: $selectedImage, onImagePicked: { image in
@@ -95,6 +99,7 @@ struct NoteDetailView: View {
         noteContents.append(newContent)
         isExpanded.append(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            isFirstResponder = true
             isExpanded[noteContents.count - 1] = true
         }
     }

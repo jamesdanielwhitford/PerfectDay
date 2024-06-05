@@ -20,6 +20,7 @@
 		84D860AD2C1023BF000A39AA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D860AC2C1023BF000A39AA /* MapView.swift */; };
 		84D860AF2C1023CC000A39AA /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D860AE2C1023CC000A39AA /* JournalView.swift */; };
 		84D860B12C102FC6000A39AA /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D860B02C102FC6000A39AA /* NoteDetailView.swift */; };
+		84D860B32C1063E8000A39AA /* FocusedTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D860B22C1063E8000A39AA /* FocusedTextEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		84D860AC2C1023BF000A39AA /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		84D860AE2C1023CC000A39AA /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		84D860B02C102FC6000A39AA /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
+		84D860B22C1063E8000A39AA /* FocusedTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedTextEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				84D860AC2C1023BF000A39AA /* MapView.swift */,
 				84D860AE2C1023CC000A39AA /* JournalView.swift */,
 				84D860B02C102FC6000A39AA /* NoteDetailView.swift */,
+				84D860B22C1063E8000A39AA /* FocusedTextEditor.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				84D860B12C102FC6000A39AA /* NoteDetailView.swift in Sources */,
 				84D8607B2C1021F9000A39AA /* ContentView.swift in Sources */,
 				84D860AF2C1023CC000A39AA /* JournalView.swift in Sources */,
+				84D860B32C1063E8000A39AA /* FocusedTextEditor.swift in Sources */,
 				84D860852C1021FA000A39AA /* PerfectDay.xcdatamodeld in Sources */,
 				84D860792C1021F9000A39AA /* PerfectDayApp.swift in Sources */,
 			);
