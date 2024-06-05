@@ -1,10 +1,3 @@
-//
-//  PerfectDayApp.swift
-//  PerfectDay
-//
-//  Created by James Whitford on 2024/06/05.
-//
-
 import SwiftUI
 
 @main
@@ -13,8 +6,23 @@ struct PerfectDayApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            TabView {
+                JournalView()
+                    .tabItem {
+                        Label("Journal", systemImage: "book")
+                    }
+
+                MapView()
+                    .tabItem {
+                        Label("Map", systemImage: "map")
+                    }
+
+                SettingsView()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+            }
+            .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
